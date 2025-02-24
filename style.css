@@ -1,0 +1,257 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: white;
+  color: #4CAF50;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.hero {
+  background: url('images/hero-image.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 150px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.features {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.features h2 {
+  margin-bottom: 40px;
+}
+
+.feature-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-item {
+  flex: 1 1 calc(33.333% - 40px);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+}
+
+.feature-item img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.pricing {
+  background: #f4f4f4;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.pricing-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.pricing-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 40px);
+}
+
+.pricing-card .price {
+  font-size: 2rem;
+  color: #4CAF50;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-card ul li {
+  margin: 10px 0;
+}
+
+.testimonials {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.testimonial-item {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(50% - 40px);
+}
+
+.testimonial-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.newsletter {
+  background: #4CAF50;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.contact {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer {
+  background: #333;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+footer .footer-links ul, footer .footer-social ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-links ul li, footer .footer-social ul li {
+  margin: 10px 0;
+}
+
+footer .footer-social ul {
+  display: flex;
+  gap: 10px;
+}
+
+footer .footer-social ul li a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .feature-grid, .pricing-grid, .testimonial-grid, .footer-content {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
