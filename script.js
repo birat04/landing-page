@@ -18,3 +18,28 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
   alert('Thank you for subscribing!');
   this.reset();
 });
+
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const nav = document.querySelector('nav');
+  
+  mobileMenuBtn.addEventListener('click', function() {
+    nav.classList.toggle('active');
+  });
+  
+  // Close mobile menu when clicking on a nav link
+  const navLinks = document.querySelectorAll('nav ul li a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      nav.classList.remove('active');
+    });
+  });
+  
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!nav.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+      nav.classList.remove('active');
+    }
+  });
+});
